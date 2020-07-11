@@ -129,15 +129,15 @@ transition: opacity 0.25s ease-in-out;
 
 /*IMAGES FOR SLIDES*/
 .slide:first-child {
-   background: url('./images/aspca_flyer.jpg') no-repeat center top/contain;
+   background: url('https://raw.githubusercontent.com/erikacade/portfolio/gh-pages/aspca_flyer.jpg') no-repeat center top/contain;
 }
 
 .slide:nth-child(2) {
-   background: url('./images/festival_poster.jpg') no-repeat center top/contain;
+   background: url('https://raw.githubusercontent.com/erikacade/portfolio/gh-pages/festival_poster.jpg') no-repeat center top/contain;
 }
 
 .slide:nth-child(3) {
-   background: url('./images/market_flyer.jpg') no-repeat center top/contain;
+   background: url('https://raw.githubusercontent.com/erikacade/portfolio/gh-pages/market_flyer.jpg') no-repeat center top/contain;
 }
 
 .slide:nth-child(4) {
