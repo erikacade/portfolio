@@ -1,0 +1,466 @@
+/*Stylesheet for Erika Combs' 2019 personal portfolio*/
+/* Color scheme?
+ * dark teal: #01b1b7
+ * cool dark grey
+ * white
+ * light grey: #eee
+ */
+* {
+   padding: 0;
+   margin: 0;
+}
+:root {
+   --main-bkgd: #171b1f;
+   --accent: #01b1b7;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+body {
+   font-family: Montserrat, Verdana, sans-serif;
+   background: var(--main-bkgd);
+   color: #eee;
+   font-size: 16px;
+   line-height: 1.5em;
+   text-align: center;
+   overflow: hidden;
+}
+
+.navbar {
+position: fixed;
+top: 0;
+z-index: 1;
+display: flex;
+width: 100%;
+height: 70px;
+background: rgba(0, 0, 0, 0.6);
+}
+
+.navbar ul {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   list-style: none;
+}
+
+.navbar ul li {
+   margin: 25px 25px 0 25px; 
+   padding: 0;
+}
+
+.navbar ul li a {
+   text-decoration: none;
+   color: #eee;
+}
+
+.navbar ul li a:hover {
+   color: var(--accent);
+}
+
+img {
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
+#welcome .content-wrap, #skillset .content-wrap {
+   height: 100vh;
+}
+
+/*HEADER*/
+#welcome h1 {
+   color: var(--accent);
+   font-family: Lobster, Verdana, sans-serif;
+   font-size: 7em;
+   line-height: 0.95em;
+   padding-top: 30vh;
+}
+
+#welcome p {
+   margin-top: 1.25em;
+   font-size: 1.2em;
+}
+
+i {
+   font-size: 1.2em;
+}
+
+section {
+   padding-top: 100px;
+}
+
+/*Header Animation*/
+.header-animate {
+   animation-name: fade-in-slide;
+   animation-duration: 0.75s;
+   animation-timing-function: ease;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+   animation-direction: normal;
+   animation-fill-mode: none;
+ }
+ @keyframes fade-in-slide {
+   0%{
+     -webkit-transform: scaleY(5);
+     transform: scaleY(3);
+     filter: blur(6px);
+     opacity: 0;
+   }
+   100%{
+     -webkit-transform: scaleY(1);
+     transform: scaleY(1);
+     filter: blur(0);
+     opacity: 1;
+   }
+ }
+ 
+
+/*SKILLS SECTION*/
+#skillset {
+   background: var(--main-bkgd);
+   overflow: auto;
+   margin-bottom: 1.5em;
+}
+#skillset h2 {
+   color: var(--accent);
+   font-size: 2.75em;
+}
+#skillset h5 {
+   font-size: 1.25em;
+   text-align: left;
+   margin: 1.1em 0 0.45em 0;
+   text-decoration: underline;
+}
+#skillset p {
+   text-align: left;
+}
+
+
+/*MAIN PAGE PROJECTS SECTION*/
+
+
+#projects h2 {
+   color: var(--accent);
+   font-size: 2.75em;
+   margin-bottom: 0.75em;
+   grid-column: span 8;
+}
+
+#projects ul {
+   display: grid;
+   grid-column: 3/7;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+#projects li {
+   margin: 1.2em 0;
+   background: #eee;
+   color: #0f0f0f;
+}
+
+#projects a {
+   color: #0f0f0f;
+   text-decoration: none;
+}
+
+.tile-content {
+   padding: 2em;
+}
+
+.tile-title {
+   font-size: 2em;
+   line-height: 1.2em;
+   padding: 0 0 1em 0;
+}
+
+/*CONTACT*/
+#contact {
+   background: #eee;
+   color: #333;
+   padding: 2em 0;
+}
+
+#contact h2 {
+   color: var(--accent);
+   font-size: 2.75em;
+}
+
+#contact p {
+   margin: 1.5em 0;
+   font-size: 1.5em;
+}
+#contact  a {
+   color: #191919;
+   text-decoration: none;
+   border-bottom: 2px solid #191919;
+   margin: 0;
+   padding: 0.1em;
+}
+
+#contact a:hover {
+ border-bottom: 2px solid var(--accent);
+}
+
+/*PROJECT PAGES*/
+#project-page {
+   padding: 100px 2em 2em 2em;
+}
+
+h2.project-title {
+   font-size: 2.75em;
+   color: var(--accent);
+}
+
+.project-page {
+   display: grid;
+}
+
+.project-image {
+   display: grid;
+   margin: 0 auto;
+   padding: 10px;
+   width: 300px;
+}
+.screenshot {
+   max-width: 500px;
+   margin: 0 auto;
+}
+
+.img-caption {
+   display: flex;
+   justify-content: center;
+   font-size: 15px;
+   font-style: italic;
+}
+
+.project-description {
+   /*margin: auto;*/
+   padding: 0 1.5em;
+   text-align: left;
+} 
+
+.project-description h3{
+   color: var(--accent);
+   font-size: 2em;
+   padding: 0 0 0.25em 0;
+}
+
+.project-description ul {
+margin-bottom: 1em;
+}
+
+.project-description li {
+   list-style-type: none;
+   padding-left: 1em;
+}
+
+
+.project-description a {
+   color: #eee;
+   font-size: 1.15em;
+   line-height: 2.5em;
+   text-decoration: underline;
+   text-decoration-color: var(--accent);
+}
+
+h2#slider {
+   padding-top: 100px;
+}
+
+/*FOOTER*/
+#main-footer {
+   padding: 1em;
+   background: var(--accent);
+   color: #eee;
+   text-align: center;
+}
+
+#main-footer a {
+   color: #191919;
+   text-decoration: none;
+   margin: 0.5em;
+   padding: 0;
+   
+}
+
+#main-footer a:hover {
+   border-bottom: 2px solid #191919;
+}
+
+
+
+/*MEDIA QUERIES*/
+
+@media(max-width: 599px){
+
+   .grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+   }
+
+   .content-wrap {
+      grid-column: 2/8;
+   }
+
+   section {
+      padding-top: 90px;
+   }
+
+   #welcome h1 {
+      padding-top: 20vh;
+   }
+  
+   #welcome p {
+      margin-top: 1.25em;
+      font-size: 0.9em;
+   }
+   
+   i {
+      font-size: 1em;
+   }
+   .navbar ul {
+      display: flex;
+      justify-content: space-evenly;
+   }
+
+   .navbar ul li {
+      margin: 25px 0 0 0;
+   }
+
+   #projects ul{
+      display: grid;
+      grid-column: 2/8;
+   }
+
+   .tile-content {
+      padding: 1.5em;
+   }
+   
+   .tile-title {
+      font-size: 1.5em;
+      line-height: 1em;
+      padding: 0 0 0.7em 0;
+   }
+
+   .project-image {
+      margin: 2em auto;
+      max-width: 300px;
+   }
+   
+   #skillset {
+      padding: 90px 0 10px 0;
+   } 
+
+   #skillset h2, #contact h2 {
+      font-size: 2.25em;
+   }
+   #contact p {
+      margin: 1.3em 0;
+      font-size: 1em;
+   }
+
+   h2.project-title {
+      font-size: 1.9em;
+      line-height: 1em;
+   }
+
+   #main-footer div{
+      grid-column: span 8;
+      text-align: center;
+   }
+}
+@media(min-width: 600px) and (max-width: 1199px) {
+   .grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+   }
+
+   .content-wrap {
+      grid-column: 2/8;
+   }
+
+   #welcome h1 {
+      padding: 30vh 15px 0 15px;
+   }
+
+   h2.project-title {
+      font-size: 2.2em;
+      line-height: 1em;
+   }
+
+   .project-image {
+      margin: 2em auto;
+      max-width: 60vw;
+   }
+
+   #main-footer div{
+      grid-column: span 8;
+      text-align: center;
+   }
+
+   #projects ul{
+   display: grid;
+   grid-column: 2/8;
+   }
+
+} /*end tablet media query*/
+
+
+@media(min-width: 1200px){
+
+   .grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+   }
+   .content-wrap {
+      grid-column: 2/8;
+   }
+   #projects ul{
+      display: grid;
+      grid-column: 3/7;
+      }
+
+      .project-title { grid-area: header; }
+      .project-image { grid-area: image; }
+      .project-description { grid-area: description; }
+      .footer { grid-area: footer; }
+         .grid-container {
+            display: grid;
+            grid-template-areas:
+              'header header header header header header header header'
+              'image image image description description description description description'
+              'footer footer footer footer footer footer footer footer';
+            grid-row-gap: 2em;
+         }
+      
+/*         .project-page {
+            display: grid;
+         }
+         .project-image {
+         display: grid;
+         }
+         
+         .project-description {
+            margin-top: 2em;
+            padding: 0.5em 1.5em;
+            text-align: left;
+         }
+         
+         .project-description h3 {
+            font-size: 2em;
+            padding: 1em 0 0.5em 0;
+         } */
+         
+         #main-footer div{
+            grid-column: span 8;
+            text-align: center;
+         }
+
+} /*end desktop media query*/
