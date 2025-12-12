@@ -74,7 +74,7 @@ img {
 
 #welcome .content-wrap,
 #skillset .content-wrap {
-    height: 100vh;
+    height: 60vh;
 }
 
 
@@ -468,6 +468,7 @@ h2#slider {
         text-align: center;
     }
 }
+
 
 
 /*end desktop media query*/
